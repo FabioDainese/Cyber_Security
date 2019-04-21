@@ -16,7 +16,7 @@ The developed solution is based on *Python3*, so you'll need to have it installe
 To run the provided solution (file [*auto_alienquiz.py*](auto_alienquiz.py) - well commented) you just need to open a terminal window, change directory to the which one where you have the file and type `python3 auto_alienquiz.py`.
 
 **N.B.** If you have changed the location of the *alienquiz* program you'll also need to update it as well into the *auto_alienquiz.py* file at the line: 
-```
+```python
 ...
 process = subprocess.Popen("<new_location_>/./alienquiz-32",stdin=subprocess.PIPE,stdout=subprocess.PIPE)
 ...
