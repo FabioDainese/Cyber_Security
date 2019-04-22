@@ -1,5 +1,5 @@
 # Introduction
-This challenge was designed to familiarize with *Python* (12<sup>th</sup> October 2018).
+This challenge was designed to familiarize with *Python* (5<sup>th</sup> October 2018).
 
 # Challenge Description
 Write a python script which interacts with *alienquiz* and beats all the levels by answering correctly to the questions! Once you'll have successfully completed it you'll be rewarded with a *FLAG* to submit to the checker system.
