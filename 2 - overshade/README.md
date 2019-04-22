@@ -12,6 +12,14 @@ To solve this problem we will use a brute forcing technique, which consists to e
 
 P.S. Obviously the `flag` file wasn't readable for our system user, so I couldn't dump the content.
 
+## Original Description
+
+>"Only at the end do you realize the power of the dark side."
+>
+>Unrestrain your emotions and use the dark side of the Force: **OVERSHADE**
+>
+>* **Hint**: *SHA256* is a widely used cryptographic hash function. A cryptographic hash function takes an arbitrarily long message and returns a digest message of fixed length. These functions are required to satisfy [specific properties](https://en.wikipedia.org/wiki/Cryptographic_hash_function#Properties) such as *preimage resistance*, *second pre-image resistance* and *collision resistance*. Cryptographic hash functions are commonly used to implement authentication without storing the password in clear text.
+
 # Dependencies
 The developed solution is based on *Python3*, so you'll need to have it installed in order to run it. To check if you have installed *Python3* in your computer, open a terminal window and type `python3 --version` or `which python3`. If the system has rised an error it means that you don't have installed it.
 
@@ -22,7 +30,7 @@ An example of output is: `XzW/` (string found) and `\x0f\x9c\x7b\x7e\x86\xdb\xd2
 
 Now we have all the pieces to run our attack. So, we open a terminal window and type the following payload to get the *FLAG*:
 
-```
+```shell
 python3 -c "import sys;sys.stdout.buffer.write(b'XzW/\0'+b'A'*15+b'\x0f\x9c\x7b\x7e\x86\xdb\xd2\xec\xa9\xf3\x29\x5a\x18\x29\xae\x45\x2b\x6c\x27\xaa\x71\x58\xc1\x5a\xde\x68\x50\x59\x2c')" | ./overshade
 ```
 
