@@ -8,9 +8,9 @@ We are able to use this attack/technique since both the real password and the en
 
 There is one more thing and that it is since the *scanf* function used in the program read maximum 49 characters as input, we are not able to overwrite entirely the arrays, that's because the `password` (20 characters) and `correcr_hash` (32 characters) arrays are in total 52 character-long, so we won't be able to change the last 3 characters of the hashed password (actually they will be only the last 2, since the *scanf* will add the end-of-line character `\x00` automatically).
 
-To solve this problem we will use a brute forcing technique, which consists to execute a Python script that will generate strings until it finds one in which the last 3 hashed characters (sha256) will be equal to `'00ae88'` (*00*: end character string; *ae88*: non-overwritable characters - to remind that it is in *little endianness* order). Once this string is found we could execute the '*overshade*' program by first entering the plain text version of the string found + filling characters up to 20 + hased version of the string.
+To solve this problem we will use a brute forcing technique, which consists to execute a Python script that will generate strings until it finds one in which the last 3 hashed characters (sha256) will be equal to `'00ae88'` (`00`: end character string; `ae88`: non-overwritable characters - to remind that it is in *little endianness* order). Once this string is found we could execute the '*overshade*' program by first entering the plain text version of the string found + filling characters up to 20 + hased version of the string.
 
-P.S. Obviously the `*flag*` file wasn't readable for our system user, so I couldn't dump the content.
+P.S. Obviously the `flag` file wasn't readable for our system user, so I couldn't dump the content.
 
 # Dependencies
 The developed solution is based on *Python3*, so you'll need to have it installed in order to run it. To check if you have installed *Python3* in your computer, open a terminal window and type `python3 --version` or `which python3`. If the system has rised an error it means that you don't have installed it.
