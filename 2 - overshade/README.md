@@ -10,7 +10,7 @@ There is one more thing and that it is since the *scanf* function used in the pr
 
 To solve this problem we will use a brute forcing technique, which consists to execute a Python script that will generate strings until it finds one in which the last 3 hashed characters (sha256) will be equal to `'00ae88'` (`00`: end character string; `ae88`: non-overwritable characters - to remind that it is in *little endianness* order). Once this string is found we could execute the '*overshade*' program by first entering the plain text version of the string found + filling characters up to 20 + hased version of the string.
 
-P.S. Obviously the `flag` file wasn't readable for our system user, so I couldn't dump the content.
+P.S. Obviously the `flag` file wasn't readable for our system user, so I couldn't simply dump the content. Another thing was that the *starcalc* program was compiled with no stack protector (option `-fno-stack-protector`).
 
 ## Original Description
 
