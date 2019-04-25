@@ -2,7 +2,7 @@
 This challenge was designed to get used to the *GDB* debugger and to put into practice the *stack overflow* and *format string* attacks (9<sup>th</sup> November 2018).
 
 # Challenge Description
-Write a *script* such that interact with the [starcalc](starcalc) program and gain unathorized access to get the *FLAG*. 
+Write a *script* such that interact with the [starcalc](starcalc) program and gain unauthorized access to get the *FLAG*. 
 
 Analyzing the source code ([starcalc.c](starcalc.c) file) we can notice two precise points where there are vulnerabilities. The first one is in the function `'calc'` when the `printf(name)` is made. In this case there's no specified string format (format directives). Meanwhile, the second one is in the function `'unlock_db'` in the section where it reads the input from the *STDIN* without specifying a maximum length (stack overflow attack).
 
