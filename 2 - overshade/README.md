@@ -24,7 +24,7 @@ P.S. Obviously the `flag` file wasn't readable for our system user, so I couldn'
 The developed solution is based on *Python3*, so you'll need to have it installed in order to run it. To check if you have installed *Python3* in your computer, open a terminal window and type `python3 --version` or `which python3`. If the system has rised an error it means that you don't have installed it.
 
 # Solution
-To find the right input string, as described in the previous sections, you just need to execute the [*find_string.py*](find_string.py) file (well commented). In order to do that you just simply need to open a terminal window, change directory to the which one where you have the file and type `python3 find_string.py`, this will finds and prints out a string and its corresponding hashed version that ends with `'00ae88'`.
+To find the right input string, as described in the previous sections, you just need to execute the [*find_string.py*](find_string.py) file (well commented). In order to do that you just simply need to open a terminal window, change directory to the which one where you have saved the file and type `python3 find_string.py`, this will finds and prints out a string and its corresponding hashed version that ends with `'00ae88'`.
 
 An example of output is: `XzW/` (string found) and `\x0f\x9c\x7b\x7e\x86\xdb\xd2\xec\xa9\xf3\x29\x5a\x18\x29\xae\x45\x2b\x6c\x27\xaa\x71\x58\xc1\x5a\xde\x68\x50\x59\x2c\x00\xae\x88` (hashed version)
 
