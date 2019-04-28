@@ -22,7 +22,7 @@ P.S. Obviously the `stars.cvs` file wasn't readable for our system user, so I co
 The developed solution is based on *Python3*, so you'll need to have it installed in order to run it. To check if you have installed *Python3* in your computer, open a terminal window and type `python3 --version` or `which python3`. If the system has rised an error it means that you don't have installed it.
 
 # Solution
-To run the provided solution (file [auto_starcalc.py](auto_starcalc.py) - well commented) you just need to open a terminal window, change directory to the which one where you have the file and type `python3 auto_starcalc.py`.
+To run the provided solution (file [auto_starcalc.py](auto_starcalc.py) - well commented) you just need to open a terminal window, change directory to the which one where you have saved the file and type `python3 auto_starcalc.py`.
 
 The developed solution first retrieves the *canary* (since the *starcal* program was compiled with stack protector enabled) and then replaces the return address with the one of the `dumpdb(...)` function in order to get the *flag*. An important thing to point out is that the program contained the canary at a fixed offset (process data area).
 
