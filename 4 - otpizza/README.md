@@ -6,7 +6,7 @@ Giving the following network configuration:
 <p align="center">
   <img src="Resources/Network Configuration.png" alt="Network Configuration">
 </p>
-Try to break into the system by firstly overcome the firewall and secondary gain unauthorized access in order to get the *FLAG*.
+Try to break into the system by firstly overcome the firewall and secondary gain unauthorized access in order to get the flag.
 
 It is also provide the [`iptables configuration`](iptables-save) and a copy of [`OTPizza`](otp.py) source code.
 
