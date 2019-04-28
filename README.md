@@ -9,12 +9,12 @@ This theoretical and practical (laboratory) course teached me techniques that, i
 # Challenges
 Every challenges was designed to get used and to put into practice in *'real'* world situations some new cybersecurity concepts/technologies as reported in the following list.
 
-1. [**Alienquiz**](): *Python*;
-2. [**Overshade**](): *GDB debugger*, *Buffer/Stack overflow attacks*, *Encryption*;
-3. [**Starcalc**](): *GDB debugger*, *Stack overflow attacks*, *Format string attacks*;
-4. [**OTPizza**](): *Firewalls*, *Access control*, *Identification*;
-5. [**RMB**](): *Server-side web attacks*;
-6. [**Obxssession**](): *Client-side web attacks*;
+1. [**Alienquiz**](https://github.com/FabioDainese/Cyber_Security/tree/master/1%20-%20alienquiz): *Python*;
+2. [**Overshade**](https://github.com/FabioDainese/Cyber_Security/tree/master/2%20-%20overshade): *GDB debugger*, *Buffer/Stack overflow attacks*, *Encryption*;
+3. [**Starcalc**](https://github.com/FabioDainese/Cyber_Security/tree/master/3%20-%20starcalc): *GDB debugger*, *Stack overflow attacks*, *Format string attacks*;
+4. [**OTPizza**](https://github.com/FabioDainese/Cyber_Security/tree/master/4%20-%20otpizza): *Firewalls*, *Access control*, *Identification*;
+5. [**RMB**](https://github.com/FabioDainese/Cyber_Security/tree/master/5%20-%20rmb): *Server-side web attacks*;
+6. [**Obxssession**](https://github.com/FabioDainese/Cyber_Security/tree/master/6%20-%20obxssession): *Client-side web attacks*;
 
 # License
 The material is available under the [Apache 2.0](https://github.com/FabioDainese/Cyber_Security/blob/master/LICENSE).
