@@ -1,0 +1,80 @@
+*mangle
+:PREROUTING DROP [0:0]
+:INPUT ACCEPT [12:824]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [7:740]
+:POSTROUTING ACCEPT [7:740]
+:mangle_drop - [0:0]
+:mangle_drop_icmp - [0:0]
+:mangle_drop_tcp - [0:0]
+:mangle_drop_udp - [0:0]
+-A PREROUTING -m state --state INVALID,UNTRACKED -j DROP
+-A PREROUTING -d 255.255.255.255 -j ACCEPT
+-A PREROUTING -d 224.0.0.0/4 -j ACCEPT
+-A PREROUTING -d 172.17.0.2 -i tap0 -p tcp -m tcp --sport 21337:21437 --dport 21337 -m state --state NEW -j DROP
+-A PREROUTING -s 10.0.0.0/16 -i ens3 -j DROP
+-A PREROUTING -s 127.0.0.0/8 -i ens3 -j DROP
+-A PREROUTING -s 172.17.0.0/16 -i ens3 -j DROP
+-A PREROUTING -i ens3 -j ACCEPT
+-A PREROUTING -s 10.0.0.0/16 -i tap0 -j ACCEPT
+-A PREROUTING -i lo -j ACCEPT
+-A PREROUTING -s 172.17.0.0/16 -i docker0 -j ACCEPT
+-A PREROUTING -j mangle_drop
+-A mangle_drop -p icmp -j mangle_drop_icmp
+-A mangle_drop -p udp -j mangle_drop_udp
+-A mangle_drop -p tcp -j mangle_drop_tcp
+-A mangle_drop -j LOG --log-prefix "MANGLE-DROP-UNK "
+-A mangle_drop -j DROP
+-A mangle_drop_icmp -j LOG --log-prefix "MANGLE-DROP-ICMP "
+-A mangle_drop_icmp -j DROP
+-A mangle_drop_tcp -j LOG --log-prefix "MANGLE-DROP-TCP "
+-A mangle_drop_tcp -j DROP
+-A mangle_drop_udp -j LOG --log-prefix "MANGLE-DROP-UDP "
+-A mangle_drop_udp -j DROP
+COMMIT
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A PREROUTING -d 10.0.241.57 -i tap0 -p tcp -m tcp --sport 21337:21437 --dport 54317 -j DNAT --to-destination 172.17.0.2:21337
+-A POSTROUTING -s 172.17.0.0/16 -o ens3 -j MASQUERADE
+COMMIT
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [0:0]
+:filter_drop - [0:0]
+:filter_drop_icmp - [0:0]
+:filter_drop_tcp - [0:0]
+:filter_drop_udp - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -i lo -m comment --comment loopback -j ACCEPT
+-A INPUT -d 255.255.255.255 -j ACCEPT
+-A INPUT -d 224.0.0.0/4 -j ACCEPT
+-A INPUT -i tap0 -p icmp -j ACCEPT
+-A INPUT -i tap0 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -i tap0 -p tcp -m tcp --dport 8080 -j ACCEPT
+-A INPUT -i ens3 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -i ens3 -p tcp -m tcp --dport 1194 -j ACCEPT
+-A INPUT -j filter_drop
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -d 172.17.0.2 -i tap0 -p tcp -m tcp --sport 21337:21437 --dport 21337 -j ACCEPT
+-A FORWARD -i docker0 -o ens3 -j ACCEPT
+-A FORWARD -j filter_drop
+-A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A OUTPUT -m owner --uid-owner 1004 -j DROP
+-A OUTPUT -j ACCEPT
+-A OUTPUT -j filter_drop
+-A filter_drop -p icmp -j filter_drop_icmp
+-A filter_drop -p udp -j filter_drop_udp
+-A filter_drop -p tcp -j filter_drop_tcp
+-A filter_drop -j LOG --log-prefix "DROP-UNK "
+-A filter_drop -j DROP
+-A filter_drop_icmp -j LOG --log-prefix "DROP-icmp "
+-A filter_drop_icmp -j DROP
+-A filter_drop_tcp -j LOG --log-prefix "DROP-tcp "
+-A filter_drop_tcp -j DROP
+-A filter_drop_udp -j LOG --log-prefix "DROP-udp "
+-A filter_drop_udp -j DROP
+COMMIT

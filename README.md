@@ -3,5 +3,18 @@ This repository was created with the aim of build an hub that contains all the w
 
 All the material was developed for the '*[Security](https://secgroup.dais.unive.it/teaching/security-course/)*' ([first](https://www.unive.it/data/course/274860/programma) and [second](https://www.unive.it/data/course/274861/programma) part) [Ca' Foscari University](https://www.unive.it) master's degree course in '*Software Dependability and Cyber Security*' (2018/2019).
 
+# Statement
+This theoretical and practical (laboratory) course teached me techniques that, if used on real systems and applications, might constitute an illegal act. I've studied these techniques with the unique purpose of understanding how to program secure applications and how to prevent possible attacks on the software developed.
+
+# Challenges
+Every challenges was designed to get used and to put into practice in *'real'* world situations some new cybersecurity concepts/technologies as reported in the following list.
+
+1. [**Alienquiz**](): *Python*;
+2. [**Overshade**](): *GDB debugger*, *Buffer/Stack overflow attacks*, *Encryption*;
+3. [**Starcalc**](): *GDB debugger*, *Stack overflow attacks*, *Format string attacks*;
+4. [**OTPizza**](): *Firewalls*, *Access control*, *Identification*;
+5. [**RMB**](): *Server-side web attacks*;
+6. [**Obxssession**](): *Client-side web attacks*;
+
 # License
 The material is available under the [Apache 2.0](https://github.com/FabioDainese/Cyber_Security/blob/master/LICENSE).

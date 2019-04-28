@@ -1,0 +1,52 @@
+body {
+	background-color: #000000;
+	background-image: url("/static/imgs/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+
+	color: white;
+}
+
+h1, h2, h3, .table thead th, .highlight {
+	color: #d2d400;
+}
+
+.container {
+	padding: 50px;
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.jumbotron,
+.table,
+#djset-content,
+pre {
+	background-color: transparent;
+	color: white;
+}
+
+h2 {
+	text-align: left;
+	border: 2px solid #999;
+	border-width: 0 0 1px 0;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.jumbotron {
+	margin: 0 0 20px 0;
+	color: #ca7659;
+}
+
+.table,
+#djset-content {
+	margin-top: 20px;
+}
+
+#djset-content h2,
+#djset-content p {
+	padding-left: 20px;
+}
+pre,
+tr {
+	border: 0;
+}
