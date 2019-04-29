@@ -20,9 +20,6 @@ Once we have done all of this it will be enough to set the Lavish's cookies from
 >* Since he is a bit paranoid about visiting random links, he is behind a firewall that prevents him to open links outside the obxssession website: https://obxssession.seclab.dais.unive.it/
 >* The message system does not render html (even links), but lavish loves to visit URLs anyway
 
-# Dependencies
-The developed solution is based on *Python3*, so you'll need to have it installed in order to run it. To check if you have installed *Python3* in your computer, open a terminal window and type `python3 --version` or `which python3`. If the system has rised an error it means that you don't have installed it.
-
 # Solution
 To perform the previously described attack you just need to:
 
