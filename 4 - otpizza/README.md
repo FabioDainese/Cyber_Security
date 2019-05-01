@@ -8,7 +8,7 @@ Giving the following network configuration:
 </p>
 Try to break into the system by firstly overcome the firewall and secondary gain unauthorized access in order to get the flag.
 
-It is also provide the [`iptables configuration`](iptables-save) and a copy of [`OTPizza`](otp.py) source code.
+It is also provided the [`iptables configuration`](iptables-save) and a copy of [`OTPizza`](otp.py) source code.
 
 ## Original Description
 
