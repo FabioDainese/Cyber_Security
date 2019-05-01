@@ -15,6 +15,7 @@ Every challenges was designed to get used and to put into practice in *'real'* w
 4. [**OTPizza**](https://github.com/FabioDainese/Cyber_Security/tree/master/4%20-%20otpizza): *Firewalls*, *Access control*, *Identification*;
 5. [**RMB**](https://github.com/FabioDainese/Cyber_Security/tree/master/5%20-%20rmb): *Server-side web attacks*;
 6. [**Obxssession**](https://github.com/FabioDainese/Cyber_Security/tree/master/6%20-%20obxssession): *Client-side web attacks*;
+7. [**Crackme**](https://github.com/FabioDainese/Cyber_Security/tree/master/7%20-%20crackme): *GDB debugge*, *IDA disassembler*, *Reverse engineering*;
 
 # License
 The material is available under the [Apache 2.0](https://github.com/FabioDainese/Cyber_Security/blob/master/LICENSE).
