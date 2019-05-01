@@ -2,7 +2,7 @@
 This challenge was designed to familiarize with the [*IDA*](https://www.hex-rays.com/products/ida/index.shtml) software, a professional tool for program analysis (11<sup>th</sup> February 2019).
 
 # Challenge Description
-This challenge consists to reverse engeneer the [`'crackme'`](crackme) program using the *IDA* disassembler and the *GDB* debugger in order to analyze the behavior of the various functions such that we can reconstruct the correct *FLAG*.
+This challenge consists to reverse engineer the [`'crackme'`](crackme) program using the *IDA* disassembler and the *GDB* debugger in order to analyze the behavior of the various functions such that we can reconstruct the correct *FLAG*.
 
 The *crackme* program basically checks if the input string, inserted by the user, meets some requirements in order to be considered a valid flag or not (there's only one possible *flag*). So to reconstruct the *flag* we’ll just need to follow the flow of the program and compose the *flag* step-by-step so that the program does not end in any error state.
 
