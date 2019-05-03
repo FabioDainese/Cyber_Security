@@ -13,9 +13,10 @@ Every challenges was designed to get used and to put into practice in *'real'* w
 2. [**Overshade**](https://github.com/FabioDainese/Cyber_Security/tree/master/2%20-%20overshade): *GDB debugger*, *Buffer/Stack overflow attacks*, *Encryption*;
 3. [**Starcalc**](https://github.com/FabioDainese/Cyber_Security/tree/master/3%20-%20starcalc): *GDB debugger*, *Stack overflow attacks*, *Format string attacks*;
 4. [**OTPizza**](https://github.com/FabioDainese/Cyber_Security/tree/master/4%20-%20otpizza): *Firewalls*, *Access control*, *Identification*;
-5. [**RMB**](https://github.com/FabioDainese/Cyber_Security/tree/master/5%20-%20rmb): *Server-side web attacks*;
-6. [**Obxssession**](https://github.com/FabioDainese/Cyber_Security/tree/master/6%20-%20obxssession): *Client-side web attacks*;
+5. [**RMB**](https://github.com/FabioDainese/Cyber_Security/tree/master/5%20-%20rmb): *Server-side web attacks*, *Blind SQL injection*;
+6. [**Obxssession**](https://github.com/FabioDainese/Cyber_Security/tree/master/6%20-%20obxssession): *Client-side web attacks* , *XSS (Cross-site scripting)*;
 7. [**Crackme**](https://github.com/FabioDainese/Cyber_Security/tree/master/7%20-%20crackme): *GDB debugge*, *IDA disassembler*, *Reverse engineering*;
+8. [**Flagshop**](https://github.com/FabioDainese/Cyber_Security/tree/master/8%20-%20flagshop): *Server-side web attacks*, *PHP vulnerabilities*;
 
 # License
 The material is available under the [Apache 2.0](https://github.com/FabioDainese/Cyber_Security/blob/master/LICENSE).
