@@ -9,12 +9,13 @@ This challenge consists of a simple platform where you can register to it. Once 
 
 ## Original Description
 >With over 5 years of exeprience our consultats know exactly how to help you with any of your flag needs!
+>
 >Visit our [website](https://flagshop.seclab.dais.unive.it), you won't regret it!
 
 # Solution
-Every time you log into the platform a `$session` variable is created, which basically it consists of an associative array that contains the current user's name. After that the back-end will set a cookie `‘session’` with the following content: `base64_encode( serialize($session) )`.
+Every time you log into the platform a `$session` variable is created, which basically it consists of an associative array that contains the current user's name. After that the back-end will set a cookie `'session'` with the following content: `base64_encode( serialize($session) )`.
 
-Every time the `'index.php'` page is called up, to understand whether to create an `‘admin page’` (flag) or not, the `'is_admin()'` function is called, which in turn calls the `'get_username()'` function (file: [functions.inc.php](Resources/flagshop/includes/functions.inc.php)). This last function (`get_username`) calls the function `'init()'` (file: [session.inc.php](Resources/flagshop/includes/session.inc.php)), where we can see that there is a loose comparison used together with the `'strcmp'` function  (`strcmp($ session_hmac, $ hmac )`).
+Every time the `'index.php'` page is called up, to understand whether to create an `'admin page'` (flag) or not, the `'is_admin()'` function is called, which in turn calls the `'get_username()'` function (file: [functions.inc.php](Resources/flagshop/includes/functions.inc.php)). This last function (`get_username`) calls the function `'init()'` (file: [session.inc.php](Resources/flagshop/includes/session.inc.php)), where we can see that there is a loose comparison used together with the `'strcmp'` function  (`strcmp($ session_hmac, $ hmac )`).
 
 The `'strcmp'` function returns `0` if two strings are equal, but if we pass a string and a non-string as parameters, the function will return a *false* statement and the result of `strcmp()` will be `0` (`'false' == 0` implies `'true'`).
 We use this technique, called *array injection*, to overcome the `IF` statement (`if ( strcmp($session_hmac, $hmac) == 0 )`) by changing the field `'hmac'`, which is a *cookie*, by setting it to an array for the previous explained reasons.
@@ -34,7 +35,7 @@ class Session {
 }
 ```
 
-Once this is done, we are able to obtain the flag. So, to sum up the attack procedure consists of:
+Once this is done, we are able to obtain the *flag*. So, to sum up the attack procedure consists of:
 1. Create an account;
 2. Log into the platform;
 3. Open the browser's `'Inspect element'` tab and go to the `'storage'` section (cookies);
