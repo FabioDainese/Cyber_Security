@@ -1,5 +1,5 @@
 # Introduction
-This challenge was designed to to put into practice the new learned things that involved *firewalls*, *access control* and *identification* (23<sup>th</sup> November 2018).
+This challenge was designed to put into practice the new learned things that involved *firewalls*, *access control* and *identification* (23<sup>th</sup> November 2018).
 
 # Challenge Description
 Giving the following network configuration:
