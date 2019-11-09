@@ -9,7 +9,7 @@ This theoretical and practical (laboratory) course teached me techniques that, i
 # Challenges
 Every challenges was designed to get used and to put into practice in *'real'* world situations some new cybersecurity concepts/technologies as reported in the following list.
 
-1. [**Alienquiz**](https://github.com/FabioDainese/Cyber_Security/tree/master/1%20-%20alienquiz): *Python*;
+1. [**Alienquiz**](https://github.com/FabioDainese/Cyber_Security/tree/master/1%20-%20alienquiz): *Python*, *RegEx*;
 2. [**Overshade**](https://github.com/FabioDainese/Cyber_Security/tree/master/2%20-%20overshade): *GDB debugger*, *Buffer/Stack overflow attacks*, *Encryption*;
 3. [**Starcalc**](https://github.com/FabioDainese/Cyber_Security/tree/master/3%20-%20starcalc): *GDB debugger*, *Stack overflow attacks*, *Format string attacks*;
 4. [**OTPizza**](https://github.com/FabioDainese/Cyber_Security/tree/master/4%20-%20otpizza): *Firewalls*, *Access control*, *Identification*;
